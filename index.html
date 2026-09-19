@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ma Sitala Digital Service & Computer Teaching Point - Computer tuition and digital online services.">
+<title>Ma Sitala | Digital Service & Computer Teaching Point</title>
+<style>
+:root{--primary:#173f8f;--secondary:#00a7a0;--accent:#ffbd2e;--dark:#14213d;--light:#f4f8ff;--white:#fff;--muted:#667085}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--dark);background:#f7f9fc;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.topbar{background:#102e67;color:#fff;font-size:13px}
+.topbar .wrap{max-width:1180px;margin:auto;padding:8px 20px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);box-shadow:0 4px 22px rgba(16,46,103,.10)}
+.nav{max-width:1180px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:11px}
+.logo{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--primary),var(--secondary));display:grid;place-items:center;color:#fff;font-size:24px;font-weight:900;box-shadow:0 7px 18px #173f8f33}
+.brand h1{font-size:18px;line-height:1.15;color:var(--primary)}
+.brand small{font-size:11px;color:var(--muted)}
+nav{display:flex;align-items:center;gap:7px}
+nav a{padding:9px 12px;border-radius:8px;font-weight:700;font-size:14px}
+nav a:hover{background:#edf4ff;color:var(--primary)}
+.menu{display:none;font-size:28px;cursor:pointer;color:var(--primary)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#102f70 0%,#1760a8 48%,#00a59d 100%);color:#fff}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:#fff1}
+.hero:before{width:330px;height:330px;right:-90px;top:-130px}.hero:after{width:220px;height:220px;left:-100px;bottom:-120px}
+.hero-inner{max-width:1180px;margin:auto;padding:85px 20px 78px;position:relative;z-index:1;display:grid;grid-template-columns:1.35fr .65fr;gap:45px;align-items:center}
+.tag{display:inline-block;background:#ffffff1f;border:1px solid #ffffff42;border-radius:30px;padding:8px 14px;font-weight:700;font-size:13px;margin-bottom:16px}
+.hero h2{font-size:clamp(34px,5vw,60px);line-height:1.08;margin-bottom:17px}
+.hero h2 span{color:#ffd75a}
+.hero p{font-size:17px;max-width:690px;color:#eaf6ff}
+.actions{margin-top:27px;display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 21px;border-radius:10px;font-weight:800;background:var(--accent);color:#16213a;box-shadow:0 8px 20px #0002}
+.btn.alt{background:#fff;color:var(--primary)}
+.hero-card{background:#ffffff16;border:1px solid #ffffff3d;border-radius:22px;padding:26px;box-shadow:0 18px 45px #001b3d33}
+.hero-card h3{font-size:20px;margin-bottom:14px}
+.hero-card .mini{display:flex;gap:11px;align-items:center;padding:12px 0;border-bottom:1px solid #ffffff24}
+.hero-card .mini:last-child{border-bottom:0}
+.mini b{font-size:22px}.mini span{font-size:13px;color:#edf8ff}
+section{max-width:1180px;margin:auto;padding:72px 20px}
+.section-head{text-align:center;max-width:720px;margin:0 auto 38px}
+.kicker{color:var(--secondary);font-weight:900;text-transform:uppercase;letter-spacing:1px;font-size:12px}
+.section-head h2{font-size:34px;color:var(--primary);margin:6px 0}
+.section-head p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:18px}
+.card{background:#fff;border:1px solid #e5ebf5;border-radius:17px;padding:24px;position:relative;overflow:hidden;box-shadow:0 8px 25px rgba(17,58,115,.07);transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 15px 32px rgba(17,58,115,.13)}
+.card:after{content:"";position:absolute;right:-28px;top:-28px;width:80px;height:80px;border-radius:50%;background:#edf7ff}
+.icon{width:53px;height:53px;border-radius:14px;background:linear-gradient(135deg,#edf4ff,#e7fbfa);display:grid;place-items:center;font-size:28px;margin-bottom:14px;position:relative;z-index:1}
+.card h3{font-size:18px;color:#173b61;margin-bottom:6px}
+.card p{font-size:14px;color:#68778a}
+.band{background:linear-gradient(135deg,#edf5ff,#eafafa)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.stat{background:#fff;border-radius:15px;padding:21px;text-align:center;box-shadow:0 6px 20px #173f8f10}
+.stat strong{display:block;font-size:28px;color:var(--primary)}.stat span{font-size:13px;color:var(--muted)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.about-box{background:#fff;border-radius:20px;padding:32px;box-shadow:0 10px 30px #173f8f12;border:1px solid #e4ecf7}
+.check{display:flex;gap:10px;margin:12px 0;color:#44546a}.check b{color:var(--secondary)}
+.contact-wrap{background:linear-gradient(135deg,#102f70,#00a59d);color:#fff;border-radius:25px;padding:45px}
+.contact-wrap .section-head{margin-bottom:25px}.contact-wrap .section-head h2{color:#fff}.contact-wrap .section-head p{color:#dcefff}
+.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.contact-item{background:#ffffff15;border:1px solid #ffffff2b;border-radius:14px;padding:18px;text-align:center}
+.contact-item .ci{font-size:27px}.contact-item small{display:block;color:#d6ecff;margin-top:5px}.contact-item strong{font-size:14px;word-break:break-word}
+footer{background:#0d2147;color:#dce8f7;text-align:center;padding:30px 20px}
+footer strong{color:#fff}.footer-links{margin:12px 0;display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+.float{position:fixed;right:19px;bottom:19px;width:59px;height:59px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:28px;box-shadow:0 7px 22px #0003;z-index:1100}
+.note{font-size:12px;color:#93a4b9;margin-top:16px}
+@media(max-width:850px){
+ .hero-inner,.about{grid-template-columns:1fr}.hero-card{max-width:520px}
+ .stats{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:repeat(2,1fr)}
+ .menu{display:block}nav{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:10px 20px 16px;box-shadow:0 10px 20px #0001;flex-direction:column;align-items:stretch}
+ nav.open{display:flex}nav a{padding:12px}
+}
+@media(max-width:520px){
+ .topbar .wrap{justify-content:center}.brand h1{font-size:15px}.brand small{font-size:10px}
+ .hero-inner{padding:58px 18px}.hero h2{font-size:38px}
+ section{padding:55px 18px}.stats,.contact-grid{grid-template-columns:1fr 1fr}
+ .contact-wrap{padding:30px 18px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>💻 Computer Tuition & Digital Services</span>
+    <span>📞 9679212861 &nbsp; | &nbsp; ✉️ mamanghatak.2004@gmail.com</span>
+  </div>
+</div>
+
+<header>
+<div class="nav">
+  <a class="brand" href="#home">
+    <div class="logo">MS</div>
+    <div><h1>Ma Sitala Digital Service</h1><small>Computer Teaching Point</small></div>
+  </a>
+  <div class="menu" onclick="toggleMenu()">☰</div>
+  <nav id="nav">
+    <a href="#home">Home</a><a href="#services">Services</a><a href="#courses">Courses</a>
+    <a href="#about">About</a><a href="#contact">Contact</a>
+  </nav>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="hero-inner">
+  <div>
+    <div class="tag">WELCOME TO OUR DIGITAL SERVICE POINT</div>
+    <h2>Learn Computer. <span>Get Digital Services.</span></h2>
+    <p><strong>Ma Sitala Digital Service & Computer Teaching Point</strong>-এ Computer Tuition-এর পাশাপাশি বিভিন্ন Online Form Fill-up, Printing, Scanning এবং Digital Services-এর assistance পাওয়া যায়।</p>
+    <div class="actions">
+      <a class="btn" href="#services">Explore Services →</a>
+      <a class="btn alt" href="tel:+919679212861">📞 Call Now</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <h3>Our Key Services</h3>
+    <div class="mini"><b>📝</b><span>Government & Competitive Exam Form Fill-up</span></div>
+    <div class="mini"><b>🎓</b><span>Scholarship & College Admission Forms</span></div>
+    <div class="mini"><b>🖨️</b><span>Print, Scan, Photocopy & Passport Photo</span></div>
+    <div class="mini"><b>💻</b><span>Practical Computer Training</span></div>
+  </div>
+</div>
+</section>
+
+<section id="services">
+<div class="section-head"><div class="kicker">Digital Services</div><h2>Everything You Need in One Place</h2><p>আপনার প্রয়োজনীয় Online ও Digital কাজের জন্য সহায়তা।</p></div>
+<div class="grid">
+<div class="card"><div class="icon">🖨️</div><h3>Print • Scan • Photocopy</h3><p>Document printing, scanning এবং photocopy service।</p></div>
+<div class="card"><div class="icon">📸</div><h3>Passport Size Photo</h3><p>Passport size photo ও প্রয়োজনীয় photo service।</p></div>
+<div class="card"><div class="icon">🏠</div><h3>Residential Certificate</h3><p>Residential Certificate-এর online application assistance।</p></div>
+<div class="card"><div class="icon">💰</div><h3>Income Certificate</h3><p>Income Certificate-এর online application assistance।</p></div>
+<div class="card"><div class="icon">🏪</div><h3>Trade License</h3><p>Trade License-এর online application assistance।</p></div>
+<div class="card"><div class="icon">⚡</div><h3>Electric Bill Payment</h3><p>Electricity bill payment-এর সহায়তা।</p></div>
+<div class="card"><div class="icon">📱</div><h3>Mobile Recharge</h3><p>Mobile recharge service।</p></div>
+<div class="card"><div class="icon">🎓</div><h3>Scholarship Forms</h3><p>বিভিন্ন Scholarship-এর online form fill-up assistance।</p></div>
+<div class="card"><div class="icon">🏫</div><h3>College Admission</h3><p>College admission form fill-up ও application assistance।</p></div>
+<div class="card"><div class="icon">🗳️</div><h3>Voter Services</h3><p>Voter-related online application ও form assistance।</p></div>
+<div class="card"><div class="icon">🍚</div><h3>Ration Services</h3><p>Ration-related online application ও services।</p></div>
+<div class="card"><div class="icon">🪪</div><h3>PAN Card Services</h3><p>PAN Card application ও related online assistance।</p></div>
+<div class="card"><div class="icon">🆔</div><h3>APAAR ID</h3><p>APAAR ID-এর প্রয়োজনীয় online assistance।</p></div>
+<div class="card"><div class="icon">🏛️</div><h3>Government Forms</h3><p>বিভিন্ন Government form fill-up ও online application assistance।</p></div>
+<div class="card"><div class="icon">📝</div><h3>Competitive Exams</h3><p>বিভিন্ন Competitive Exam-এর online form fill-up assistance।</p></div>
+</div>
+<div class="stats">
+<div class="stat"><strong>15+</strong><span>Digital Services</span></div>
+<div class="stat"><strong>6+</strong><span>Computer Courses</span></div>
+<div class="stat"><strong>100%</strong><span>Practical Focus</span></div>
+<div class="stat"><strong>1</strong><span>One Stop Point</span></div>
+</div>
+</section>
+
+<div class="band">
+<section id="courses">
+<div class="section-head"><div class="kicker">Computer Teaching</div><h2>Learn Computer with Practical Training</h2><p>শুরু থেকে practical computer skills শেখানো হবে।</p></div>
+<div class="grid">
+<div class="card"><div class="icon">💻</div><h3>Basic Computer</h3><p>Computer fundamentals, typing, files ও everyday computer use।</p></div>
+<div class="card"><div class="icon">📊</div><h3>MS Office</h3><p>MS Word, Excel, PowerPoint এবং practical work।</p></div>
+<div class="card"><div class="icon">🌐</div><h3>Internet & Online Work</h3><p>Internet, email ও online service-এর practical training।</p></div>
+<div class="card"><div class="icon">🐍</div><h3>Python Programming</h3><p>Python basic programming ও practical exercises।</p></div>
+<div class="card"><div class="icon">🌍</div><h3>Web Development</h3><p>HTML, CSS ও basic JavaScript শেখানো।</p></div>
+<div class="card"><div class="icon">🎯</div><h3>Practical Computer Skills</h3><p>কাজের জন্য প্রয়োজনীয় practical computer skills।</p></div>
+</div>
+</section>
+</div>
+
+<section id="about">
+<div class="about">
+<div>
+<div class="kicker">About Us</div><h2 style="font-size:36px;color:var(--primary);margin:7px 0 15px">Your Local Computer & Digital Service Point</h2>
+<p style="color:var(--muted)">Ma Sitala Digital Service & Computer Teaching Point হলো Computer learning এবং প্রয়োজনীয় online/digital service assistance-এর একটি একসাথে পাওয়া যায় এমন কেন্দ্র।</p>
+</div>
+<div class="about-box">
+<div class="check"><b>✓</b><span>Computer Tuition ও practical learning</span></div>
+<div class="check"><b>✓</b><span>Online form fill-up assistance</span></div>
+<div class="check"><b>✓</b><span>Print, Scan, Photocopy ও Photo service</span></div>
+<div class="check"><b>✓</b><span>Government, Scholarship ও Competitive Exam forms</span></div>
+<div class="check"><b>✓</b><span>Voter, Ration, PAN ও APAAR related assistance</span></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="contact-wrap">
+<div class="section-head"><div class="kicker" style="color:#9df4ed">Get In Touch</div><h2>Contact Ma Sitala</h2><p>ভর্তি, course বা digital service সম্পর্কে জানতে যোগাযোগ করুন।</p></div>
+<div class="contact-grid">
+<div class="contact-item"><div class="ci">📞</div><small>Mobile</small><strong>9679212861</strong></div>
+<div class="contact-item"><div class="ci">💬</div><small>WhatsApp</small><strong>9679212861</strong></div>
+<div class="contact-item"><div class="ci">✉️</div><small>Email</small><strong>mamanghatak.2004@gmail.com</strong></div>
+<div class="contact-item"><div class="ci">📘</div><small>Facebook</small><strong>Maman Ghatak</strong></div>
+</div>
+<div style="text-align:center;margin-top:22px">
+<a class="btn" href="tel:+919679212861">Call Now</a>
+<a class="btn alt" href="https://wa.me/919679212861">WhatsApp</a>
+<a class="btn alt" href="mailto:mamanghatak.2004@gmail.com">Email Us</a>
+</div>
+<p style="text-align:center;margin-top:12px;color:#d8efff;font-size:13px">Instagram: MA.M05382@</p>
+<p class="note" style="text-align:center">নোট: সরকারি/অফিশিয়াল certificate বা application-এর ক্ষেত্রে সংশ্লিষ্ট কর্তৃপক্ষের নিয়ম ও প্রয়োজনীয় documents প্রযোজ্য।</p>
+</div>
+</section>
+</main>
+
+<footer>
+<strong>Ma Sitala Digital Service & Computer Teaching Point</strong>
+<div class="footer-links"><a href="#services">Services</a><a href="#courses">Courses</a><a href="#contact">Contact</a></div>
+<p>© <span id="year"></span> All Rights Reserved.</p>
+</footer>
+
+<a class="float" href="https://wa.me/919679212861" aria-label="WhatsApp">☘</a>
+<script>
+function toggleMenu(){document.getElementById('nav').classList.toggle('open')}
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
